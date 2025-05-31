@@ -2,6 +2,7 @@ import { AppAreaChart } from "@/components/charts/AppAreaChart";
 import { AppBarChart } from "@/components/charts/AppBarChart";
 import { AppPieChart } from "@/components/charts/AppPieChart";
 import { CardList } from "@/components/CardList";
+import { TodoList } from "@/components/TodoList";
 
 const HomePage = () => {
   return (
@@ -15,7 +16,9 @@ const HomePage = () => {
       <div className="bg-primary-foreground p-4 rounded-lg">
         <AppPieChart />
       </div>
-      <div className="bg-primary-foreground p-4 rounded-lg">Test</div>
+      <div className="bg-primary-foreground p-4 rounded-lg">
+        <TodoList />
+      </div>
       <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2 xl:col-span-1 2xl:col-span-2">
         <AppAreaChart />
       </div>

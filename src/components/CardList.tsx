@@ -95,7 +95,7 @@ const latestTransactions = [
 const CardList = ({ title }: CardListProps) => {
     const list = title === "Popular Content" ? popularContent : latestTransactions;
     return (
-        <div className="">
+        <>
             <h1 className="text-lg font-medium mb-6">{title}</h1>
             <div className="flex flex-col gap-2">
                 {list.map(item => (
@@ -115,7 +115,7 @@ const CardList = ({ title }: CardListProps) => {
                     </Card>
                 ))}
             </div>
-        </div>
+        </>
     );
 }
 
