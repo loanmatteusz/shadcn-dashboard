@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ShadCN Dashboard Studies
 
-## Getting Started
+### Roteiro
+- Criar um botão com o comando do shadcn
+- Atualizar propriedades para ele ter um size "xl"
+- Buscar icone la do lucide-react (CirclePlus)
+- Adicionar custom color (--custom-color) no .css global (.6 .2 150)
+- Adicionar --color-custom-color (var) e aplicou a --custom-color e usa um text-custom-color
 
-First, run the development server:
 
+### O que é CN?
+- É um utilitário usado para concatenar classes CSS de forma condicional
+
+Posso usar da seguinte maneira, por exemplo:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+import { cn } from '@/lib/utils'
+
+function Button({ isActive }: { isActive: boolean }) {
+  return (
+    <button className={cn('px-4 py-2', isActive && 'bg-blue-500')}>
+      Clique
+    </button>
+  );
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### App com ShadCN
+- Criar componentes Sidebar e Navbar
+- Modificar o layout em app/ substituindo o children por ambos os novos 2 componentes (inclua Navbar e children em um main tag)
+- Navbar é uma tag nav e recebe um collapse button e Links (Dashboard com icon Moon)
+- Adicionar Collpase Button da lib e os icones respectivos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+### asChild
+Propriedade do Radux UI que em vez de renderizar o próprio elemento, passa seu comportamento para a teg filha, como por exemplo:
+```bash
+import { Link } from "react-router-dom"; // ou de next/link no Next.js
+import { Button } from "@/components/ui/button";
 
-To learn more about Next.js, take a look at the following resources:
+<Button asChild>
+  <Link to="/dashboard">Ir para o dashboard</Link>
+</Button>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`<button><a></a></button>` é inválido para o html, passando o asChild no `button`, a tag `a` recebe as caracteristicas da tag `button`.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ShadCN Darkmode
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Instalar `npm install next-themes`
+
+O componente `ThemeProvider`, que é um provider, vai no root-layout (Descrito em `https://ui.shadcn.com/docs/dark-mode/next`).
+Após importar podemos usar a estrutura padrão que a página também exemplifica para os botões de mudança do tema, usando a paleta do arquivo global.
+
+
+### Sidebar
+
