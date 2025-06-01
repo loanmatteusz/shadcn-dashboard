@@ -1,59 +1,59 @@
-# ShadCN Dashboard Studies
+# Shadcn Dashboard — Interface Study with React and Tailwind
 
-### Roteiro
-- Criar um botão com o comando do shadcn
-- Atualizar propriedades para ele ter um size "xl"
-- Buscar icone la do lucide-react (CirclePlus)
-- Adicionar custom color (--custom-color) no .css global (.6 .2 150)
-- Adicionar --color-custom-color (var) e aplicou a --custom-color e usa um text-custom-color
+This repository is a practical study on creating modern and scalable interfaces using:
 
+- **React (via Next.js)**
+- **Tailwind CSS**
+- **shadcn/ui** (library based on Radix UI)
+- **Reusable and accessible components**
+- **Design system organization**
+- **Dark mode and responsiveness**
 
-### O que é CN?
-- É um utilitário usado para concatenar classes CSS de forma condicional
+---
 
-Posso usar da seguinte maneira, por exemplo:
-```bash
-import { cn } from '@/lib/utils'
+## 🎯 Study Objectives
 
-function Button({ isActive }: { isActive: boolean }) {
-  return (
-    <button className={cn('px-4 py-2', isActive && 'bg-blue-500')}>
-      Clique
-    </button>
-  );
-}
-```
+The main goal of this project is to **explore and understand the creation of modern dashboards**, focusing on:
 
+1. **Design System with shadcn/ui**  
+   - Understanding component architecture
+   - Theme and design token customization
 
-### App com ShadCN
-- Criar componentes Sidebar e Navbar
-- Modificar o layout em app/ substituindo o children por ambos os novos 2 componentes (inclua Navbar e children em um main tag)
-- Navbar é uma tag nav e recebe um collapse button e Links (Dashboard com icon Moon)
-- Adicionar Collpase Button da lib e os icones respectivos
+2. **Accessibility and modern UX**  
+   - Using components with accessibility support (via Radix UI)
+   - Responsiveness and dark mode support
 
+3. **Front-end project organization with Next.js**  
+   - Folder structuring patterns
+   - Modularization and separation of concerns
 
-### asChild
-Propriedade do Radux UI que em vez de renderizar o próprio elemento, passa seu comportamento para a teg filha, como por exemplo:
-```bash
-import { Link } from "react-router-dom"; // ou de next/link no Next.js
-import { Button } from "@/components/ui/button";
+4. **Integration with icons, charts, and interactions**  
+   - Using libraries such as `lucide-react` and `@radix-ui/react-icons`
+   - Inclusion of charts with libraries like `recharts` (or similar)
 
-<Button asChild>
-  <Link to="/dashboard">Ir para o dashboard</Link>
-</Button>
+5. **Study of TypeScript typing in UI**  
+   - Creating typed components
+   - Best practices with props and extensibility
 
-```
+---
 
-`<button><a></a></button>` é inválido para o html, passando o asChild no `button`, a tag `a` recebe as caracteristicas da tag `button`.
+## 📚 Technologies Used
 
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-### ShadCN Darkmode
+---
 
-Instalar `npm install next-themes`
+## 💡 Inspiration
 
-O componente `ThemeProvider`, que é um provider, vai no root-layout (Descrito em `https://ui.shadcn.com/docs/dark-mode/next`).
-Após importar podemos usar a estrutura padrão que a página também exemplifica para os botões de mudança do tema, usando a paleta do arquivo global.
+This project is inspired by modern dashboards used in SaaS platforms, admin systems, and internal control panels. The use of `shadcn/ui` aims to bring **visual consistency, accessibility, and customization flexibility**.
 
+---
 
-### Sidebar
+## 📌 Notes
 
+This project is **not intended for production use**, but rather for **exploring modern UI patterns and front-end architecture**. Some features may be incomplete or use static sample data.
