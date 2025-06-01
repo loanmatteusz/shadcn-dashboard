@@ -1,6 +1,11 @@
 import { CardList } from "@/components/CardList";
+import { EditUser } from "@/components/EditUser";
+import { Badge } from "@/components/ui/badge";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { Button } from "@/components/ui/button";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Progress } from "@/components/ui/progress";
+import { Sheet, SheetTrigger } from "@/components/ui/sheet";
 import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react";
 
 const SingleUserPage = () => {
@@ -82,7 +87,44 @@ const SingleUserPage = () => {
                             </HoverCard>
                         </div>
                     </div>
-                    <div className="bg-primary-foreground p-4 rounded-lg">Info</div>
+                    <div className="bg-primary-foreground p-4 rounded-lg">
+                        <div className="flex items-center justify-between">
+                            <h1 className="text-xl font-semibold">User Information</h1>
+                            <Sheet>
+                                <SheetTrigger asChild>
+                                    <Button>Edit User</Button>
+                                </SheetTrigger>
+                                <EditUser />
+                            </Sheet>
+                        </div>
+                        <div className="space-y-4 mt-4">
+                            <div className="flex flex-col gap-2 mb-8">
+                                <p className="text-sm text-muted-foreground">Profile completion</p>
+                                <Progress value={67} />
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold">Username:</span>
+                                <span>loanmatteusz</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold">E-mail:</span>
+                                <span>loanmatteusz@email.com</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold">Phone:</span>
+                                <span>+1 234 5678</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold">Location:</span>
+                                <span>Auckland, NZ</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-bold">Role:</span>
+                                <Badge>admin</Badge>
+                            </div>
+                            <p className="text-sm text-muted-foreground mt-4">Joined on 2025.01.01</p>
+                        </div>
+                    </div>
                     <div className="bg-primary-foreground p-4 rounded-lg">
                         <CardList title="Recent Transactions" />
                     </div>
