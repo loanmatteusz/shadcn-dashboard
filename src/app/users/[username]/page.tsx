@@ -142,7 +142,9 @@ const SingleUserPage = () => {
                             <h1 className="text-xl font-semibold">Loan Matteus</h1>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </p>
                     </div>
                     <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
