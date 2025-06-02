@@ -1,4 +1,4 @@
-import { Calendar, ChevronDown, ChevronUp, Home, Inbox, Plus, Projector, Search, Settings, User2 } from "lucide-react";
+import { ChevronDown, ChevronUp, Home, Inbox, Plus, Projector, Settings, User, User2, Wallet } from "lucide-react";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubItem, SidebarSeparator } from "./ui/sidebar";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,19 +12,19 @@ const items = [
         icon: Home,
     },
     {
+        title: "Profile",
+        url: "/users/loan-matteus",
+        icon: User,
+    },
+    {
+        title: "Payments",
+        url: "/payments",
+        icon: Wallet,
+    },
+    {
         title: "Inbox",
         url: "#",
         icon: Inbox,
-    },
-    {
-        title: "Calendar",
-        url: "#",
-        icon: Calendar,
-    },
-    {
-        title: "Search",
-        url: "#",
-        icon: Search,
     },
     {
         title: "Settings",
