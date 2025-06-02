@@ -1,3 +1,4 @@
+import { AppLineChart } from "@/components/AppLineChart";
 import { CardList } from "@/components/CardList";
 import { EditUser } from "@/components/EditUser";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -147,7 +148,10 @@ const SingleUserPage = () => {
                             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </p>
                     </div>
-                    <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
+                    <div className="bg-primary-foreground p-4 rounded-lg">
+                        <h1 className="text-xl font-semibold">User Activity</h1>
+                        <AppLineChart />
+                    </div>
                 </div>
             </div>
         </>
