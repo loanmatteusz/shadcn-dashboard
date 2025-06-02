@@ -73,9 +73,9 @@ const Navbar = () => {
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
-                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                        <DropdownMenuLabel>Home</DropdownMenuLabel>
+                        <DropdownMenuLabel>User</DropdownMenuLabel>
+                        <DropdownMenuLabel>Payment</DropdownMenuLabel>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
