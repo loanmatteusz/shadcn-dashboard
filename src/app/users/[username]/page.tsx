@@ -1,5 +1,6 @@
 import { CardList } from "@/components/CardList";
 import { EditUser } from "@/components/EditUser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
@@ -131,7 +132,21 @@ const SingleUserPage = () => {
                 </div>
                 {/* RIGHT */}
                 <div className="w-full xl:w-2/3 space-y-6">
-                    <div className="bg-primary-foreground p-4 rounded-lg">User Card</div>
+                    <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
+                        <div className="flex items-center gap-2">
+                            <Avatar className="size-12">
+                                <AvatarImage src="https://avatars.githubusercontent.com/u/39535956" />
+                                <AvatarFallback>LM</AvatarFallback>
+                            </Avatar>
+
+                            <h1 className="text-xl font-semibold">Loan Matteus</h1>
+                        </div>
+                        <p className="text-sm text-muted-foreground">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
                     <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
                 </div>
             </div>
